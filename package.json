@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/sickle5stone/ngrok-qr-vite-plugin"
   },
+  "publishConfig": {
+    "@sickle5stone:registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "vite",
     "ngrok",
