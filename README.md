@@ -76,6 +76,19 @@ export default defineConfig({
 })
 ```
 
+### Using Named Import
+
+```typescript
+import { defineConfig } from 'vite'
+import { ngrokQr } from 'ngrok-qr-vite-plugin'
+
+export default defineConfig({
+  plugins: [
+    ngrokQr()
+  ]
+})
+```
+
 ## Configuration Options
 
 | Option | Type | Default | Description |

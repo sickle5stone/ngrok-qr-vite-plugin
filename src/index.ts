@@ -55,4 +55,4 @@ export default function ngrokQrPlugin(options: NgrokQrOptions = {}): Plugin {
   };
 }
 
-export { ngrokQrPlugin as "ngrok-qr" };
+export { ngrokQrPlugin as ngrokQr };
