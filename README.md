@@ -54,8 +54,8 @@ import ngrokQrPlugin from 'ngrok-qr-vite-plugin'
 export default defineConfig({
   plugins: [
     ngrokQrPlugin({
-      port: 5173,        // Default: 3000
-      host: 'localhost', // Default: 'localhost'
+      port: 5173,        // Default: server port or 8080
+      host: '127.0.0.1', // Optional: specify host
       protocol: 'http',  // Default: 'tcp'
       authtoken: 'your_ngrok_auth_token_here' // Optional: can use NGROK_AUTH_TOKEN env var
     })
@@ -93,8 +93,8 @@ export default defineConfig({
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `port` | `number` | `3000` | The port to tunnel |
-| `host` | `string` | `'localhost'` | The host to tunnel |
+| `port` | `number` | `server port or 8080` | The port to tunnel |
+| `host` | `string` | - | The host to tunnel (optional) |
 | `protocol` | `'http' \| 'https'` | `'tcp'` | The protocol to use |
 | `authtoken` | `string` | `process.env.NGROK_AUTH_TOKEN` | Your ngrok auth token |
 
@@ -118,6 +118,9 @@ npm run build
 
 # Development mode
 npm run dev
+
+# Run tests
+npm test
 ```
 
 ## License
