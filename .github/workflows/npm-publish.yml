@@ -22,8 +22,8 @@ jobs:
       - name: Get previous and current version
         id: version
         run: |
-          echo "prev_version=$(git show HEAD~1:package.json | jq -r '.version')" >> $GITHUB_OUTPUT
-          echo "curr_version=$(jq -r '.version' package.json)" >> $GITHUB_OUTPUT
+          PREV_VERSION=$(git show HEAD~1:package.json | jq -r '.version')
+          CURR_VERSION=$(jq -r '.version' package.json)
           if [ "$PREV_VERSION" = "$CURR_VERSION" ]; then
             echo "version_changed=false" >> $GITHUB_OUTPUT
           else
