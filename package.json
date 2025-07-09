@@ -1,6 +1,6 @@
 {
   "name": "ngrok-qr-vite-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vite plugin that creates a QR code for a local server using ngrok",
   "license": "MIT",
   "author": "sickle5stone",
